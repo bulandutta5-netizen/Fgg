@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LA LETIZIA - 5th Floor Coffee & Late-Night Lounge | Kolkata</title>
+    <meta name="description" content="La Letizia - Specialty Coffee, Fresh Café Bites & Late-Night Lounge opposite Quest Mall, Park Circus, Kolkata. Open daily from 12:00 PM to 5:00 AM.">
+    
+    <!-- Google Fonts: Montserrat & Roboto (Exact KOPPEE Typography) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FFFBF2',
+                        espresso: '#33211D',
+                        caramel: '#DA9F5B',
+                        caramelHover: '#c58945',
+                        bodyGray: '#555555'
+                    },
+                    fontFamily: {
+                        heading: ['Montserrat', 'sans-serif'],
+                        body: ['Roboto', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #FFFBF2;
+            color: #555555;
+            font-family: 'Roboto', sans-serif;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6, .font-heading {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Signature KOPPEE Vertical Section Line */
+        .section-title {
+            position: relative;
+            padding-top: 115px;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        .section-title::before {
+            position: absolute;
+            content: "";
+            width: 2px;
+            height: 100px;
+            top: 0;
+            left: 50%;
+            margin-left: -1px;
+            background: #DA9F5B;
+        }
+
+        /* Signature KOPPEE Roasted Coffee Bean Dark Overlay */
+        .coffee-bg {
+            background: linear-gradient(rgba(51, 33, 29, 0.88), rgba(51, 33, 29, 0.88)), 
+                        url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1600&q=80');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Signature KOPPEE Torn Paper / Jagged Edge Dividers */
+        .torn-top, .torn-bottom {
+            position: relative;
+        }
+        .torn-top::before {
+            content: "";
+            position: absolute;
+            top: -1px;
+            left: 0;
+            width: 100%;
+            height: 18px;
+            z-index: 10;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 24' preserveAspectRatio='none'%3E%3Cpath fill='%23FFFBF2' d='M0,0 L1200,0 L1200,10 L1185,18 L1170,8 L1150,20 L1130,11 L1110,19 L1090,7 L1070,17 L1050,9 L1030,21 L1010,10 L990,18 L970,8 L950,19 L930,11 L910,22 L890,9 L870,17 L850,7 L830,19 L810,10 L790,21 L770,8 L750,18 L730,9 L710,20 L690,11 L670,19 L650,7 L630,17 L610,9 L590,21 L570,10 L550,18 L530,8 L510,19 L490,11 L470,22 L450,9 L430,17 L410,7 L390,19 L370,10 L350,21 L330,8 L310,18 L290,9 L270,20 L250,11 L230,19 L210,7 L190,17 L170,9 L150,21 L130,10 L110,18 L90,8 L70,19 L50,11 L30,20 L15,9 L0,16 Z'/%3E%3C/svg%3E");
+            background-size: 600px 18px;
+            background-repeat: repeat-x;
+        }
+        .torn-bottom::after {
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 18px;
+            z-index: 10;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 24' preserveAspectRatio='none'%3E%3Cpath fill='%23FFFBF2' d='M0,24 L1200,24 L1200,14 L1185,6 L1170,16 L1150,4 L1130,13 L1110,5 L1090,17 L1070,7 L1050,15 L1030,3 L1010,14 L990,6 L970,16 L950,5 L930,13 L910,2 L890,15 L870,7 L850,17 L830,5 L810,14 L790,3 L770,16 L750,6 L730,15 L710,4 L690,13 L670,5 L650,17 L630,7 L610,15 L590,3 L570,14 L550,6 L530,16 L510,5 L490,13 L470,2 L450,15 L430,7 L410,17 L390,5 L370,14 L350,3 L330,16 L310,6 L290,15 L270,4 L250,13 L230,5 L210,17 L190,7 L170,15 L150,3 L130,14 L110,6 L90,16 L70,5 L50,13 L30,4 L15,15 L0,8 Z'/%3E%3C/svg%3E");
+            background-size: 600px 18px;
+            background-repeat: repeat-x;
+        }
+
+        /* Menu Price Circle Badge */
+        .menu-price-badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background-color: #DA9F5B;
+            color: #33211D;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+        /* Form Input KOPPEE Styling */
+        .koppee-input {
+            width: 100%;
+            background-color: transparent;
+            border: 1px solid #DA9F5B;
+            padding: 14px 20px;
+            color: #ffffff;
+            outline: none;
+            transition: all 0.2s;
+        }
+        .koppee-input::placeholder {
+            color: #999999;
+        }
+        .koppee-input:focus {
+            box-shadow: 0 0 0 2px rgba(218, 159, 91, 0.35);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-espresso/95 lg:bg-transparent py-4 px-6 lg:px-14">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="#home" class="text-white font-heading font-extrabold text-3xl sm:text-4xl tracking-wider uppercase">
+                LA LETIZIA
+            </a>
+            
+            <!-- Mobile Hamburger Button (Exact KOPPEE Bordered Style) -->
+            <button id="mobile-menu-btn" aria-label="Toggle Menu" class="lg:hidden text-white/80 border border-white/25 px-3.5 py-2 rounded-sm focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden lg:flex items-center space-x-7 font-heading font-semibold text-sm tracking-wide">
+                <a href="#home" class="text-caramel transition">Home</a>
+                <a href="#about" class="text-white hover:text-caramel transition">About</a>
+                <a href="#service" class="text-white hover:text-caramel transition">Service</a>
+                <a href="#menu" class="text-white hover:text-caramel transition">Menu</a>
+                <a href="#reservation" class="text-white hover:text-caramel transition">Reservation</a>
+                <a href="#testimonial" class="text-white hover:text-caramel transition">Testimonial</a>
+                <a href="#contact" class="text-white hover:text-caramel transition">Contact</a>
+            </nav>
+        </div>
+
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-espresso mt-4 border-t border-white/10 pt-3 pb-4 space-y-2 font-heading text-sm">
+            <a href="#home" class="block py-2 px-3 text-caramel font-semibold">Home</a>
+            <a href="#about" class="block py-2 px-3 text-white hover:text-caramel">About</a>
+            <a href="#service" class="block py-2 px-3 text-white hover:text-caramel">Service</a>
+            <a href="#menu" class="block py-2 px-3 text-white hover:text-caramel">Menu</a>
+            <a href="#reservation" class="block py-2 px-3 text-white hover:text-caramel">Reservation</a>
+            <a href="#testimonial" class="block py-2 px-3 text-white hover:text-caramel">Testimonial</a>
+            <a href="#contact" class="block py-2 px-3 text-white hover:text-caramel">Contact</a>
+        </div>
+    </header>
+
+    <!-- ================= HERO CAROUSEL (Matches Screenshot 10) ================= -->
+    <section id="home" class="relative w-full min-h-[540px] lg:min-h-[760px] flex items-center justify-center coffee-bg torn-bottom pt-16">
+        <!-- Left Arrow -->
+        <button onclick="changeSlide(-1)" aria-label="Previous Slide" class="absolute left-4 sm:left-10 text-white/60 hover:text-white text-3xl sm:text-4xl z-20 transition">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <!-- Center Slide Content -->
+        <div class="text-center px-6 z-10 max-w-4xl mx-auto">
+            <p id="hero-subtitle" class="text-caramel font-heading font-semibold text-xl sm:text-3xl mb-2 tracking-wide">
+                We Have Been Serving
+            </p>
+            <h1 id="hero-title" class="text-white font-heading font-extrabold text-6xl sm:text-8xl lg:text-9xl uppercase tracking-tight leading-none my-3">
+                COFFEE
+            </h1>
+            <h2 id="hero-tagline" class="text-white font-heading font-bold text-xl sm:text-3xl uppercase tracking-widest mt-3">
+                * OPEN TILL 5 AM *
+            </h2>
+        </div>
+
+        <!-- Right Arrow -->
+        <button onclick="changeSlide(1)" aria-label="Next Slide" class="absolute right-4 sm:right-10 text-white/60 hover:text-white text-3xl sm:text-4xl z-20 transition">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </section>
+
+    <!-- ================= ABOUT US (Matches Screenshots 8, 9, 10) ================= -->
+    <section id="about" class="py-16 sm:py-24 px-5 max-w-7xl mx-auto">
+        <div class="section-title">
+            <h4 class="text-caramel font-heading font-semibold tracking-[0.25em] uppercase text-lg sm:text-xl mb-1">
+                About Us
+            </h4>
+            <h2 class="text-espresso font-heading font-bold text-3xl sm:text-5xl">
+                Serving At Park Circus
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
+            <!-- Left Column: Our Story -->
+            <div>
+                <h3 class="text-espresso font-heading font-bold text-2xl sm:text-3xl mb-4">
+                    Our Story
+                </h3>
+                <p class="text-espresso font-medium text-lg leading-relaxed mb-4">
+                    Located on the 5th Floor right opposite Quest Mall in Ballygunge, La Letizia is Kolkata's premier coffee lounge and late-night retreat.
+                </p>
+                <p class="text-bodyGray leading-relaxed mb-6">
+                    Whether you're stopping by at noon for a freshly pulled espresso and artisan café platters, or unwinding with friends at 3:00 AM over signature mocktails and desserts, our vibrant 5th-floor ambiance welcomes you every single day from 12:00 PM to 5:00 AM.
+                </p>
+                <a href="#reservation" class="inline-block bg-espresso hover:bg-black text-white font-heading font-semibold px-7 py-3 transition">
+                    Learn More
+                </a>
+            </div>
+
+            <!-- Center Column: Splash Coffee Cup Image (Matches Screenshot 9) -->
+            <div class="flex justify-center my-4 lg:my-0">
+                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=700&q=80" 
+                     alt="La Letizia Signature Coffee Cup" 
+                     class="w-72 sm:w-80 h-96 object-cover rounded-sm shadow-lg border-4 border-caramel/30">
+            </div>
+
+            <!-- Right Column: Our Vision (Matches Screenshots 8 & 9) -->
+            <div>
+                <h3 class="text-espresso font-heading font-bold text-2xl sm:text-3xl mb-4">
+                    Our Vision
+                </h3>
+                <p class="text-bodyGray leading-relaxed mb-5">
+                    To craft an unforgettable rooftop-level café experience in the heart of Kolkata—combining specialty roasted beans, gourmet comfort food, and unmatched late-night hospitality rated 4.5★ by over 1,800 guests.
+                </p>
+                <ul class="space-y-3 mb-7 text-espresso font-medium text-base sm:text-lg">
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-caramel mr-3 text-lg"></i>
+                        100% Specialty Arabica & Artisan Brews
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-caramel mr-3 text-lg"></i>
+                        Open Daily From 12:00 PM Until 5:00 AM
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-caramel mr-3 text-lg"></i>
+                        5th Floor Lounge Opposite Quest Mall
+                    </li>
+                </ul>
+                <a href="#menu" class="inline-block bg-caramel hover:bg-caramelHover text-espresso font-heading font-semibold px-7 py-3 transition">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= OUR SERVICES (Matches Screenshot 8) ================= -->
+    <section id="service" class="py-12 sm:py-20 px-5 max-w-7xl mx-auto">
+        <div class="section-title">
+            <h4 class="text-caramel font-heading font-semibold tracking-[0.25em] uppercase text-lg sm:text-xl mb-1">
+                Our Services
+            </h4>
+            <h2 class="text-espresso font-heading font-bold text-3xl sm:text-5xl">
+                Fresh & Organic Beans
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <!-- Service 1 -->
+            <div class="grid grid-cols-1 sm:grid-cols-12 gap-5 items-center">
+                <div class="sm:col-span-5">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80" alt="Late Night Delivery & Takeaway" class="w-full h-48 object-cover">
+                </div>
+                <div class="sm:col-span-7">
+                    <div class="flex items-center mb-2">
+                        <span class="w-11 h-11 rounded-full bg-caramel text-espresso flex items-center justify-center mr-3 shrink-0">
+                            <i class="fas fa-clock text-lg"></i>
+                        </span>
+                        <h3 class="text-espresso font-heading font-bold text-xl">Late-Night Lounge (Till 5 AM)</h3>
+                    </div>
+                    <p class="text-bodyGray leading-relaxed">
+                        Kolkata's favorite post-midnight hangout spot at Beck Bagan Row, serving hot brews, coolers, and platters until 5:00 AM daily.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="grid grid-cols-1 sm:grid-cols-12 gap-5 items-center">
+                <div class="sm:col-span-5">
+                    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80" alt="Fresh Coffee Beans" class="w-full h-48 object-cover">
+                </div>
+                <div class="sm:col-span-7">
+                    <div class="flex items-center mb-2">
+                        <span class="w-11 h-11 rounded-full bg-caramel text-espresso flex items-center justify-center mr-3 shrink-0">
+                            <i class="fas fa-coffee text-lg"></i>
+                        </span>
+                        <h3 class="text-espresso font-heading font-bold text-xl">Freshly Roasted Beans</h3>
+                    </div>
+                    <p class="text-bodyGray leading-relaxed">
+                        Every cup is crafted from freshly ground aromatic beans, delivering rich crema, bold notes, and silky latte art.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="grid grid-cols-1 sm:grid-cols-12 gap-5 items-center">
+                <div class="sm:col-span-5">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=600&q=80" alt="Best Quality Bites" class="w-full h-48 object-cover">
+                </div>
+                <div class="sm:col-span-7">
+                    <div class="flex items-center mb-2">
+                        <span class="w-11 h-11 rounded-full bg-caramel text-espresso flex items-center justify-center mr-3 shrink-0">
+                            <i class="fas fa-award text-lg"></i>
+                        </span>
+                        <h3 class="text-espresso font-heading font-bold text-xl">Gourmet Café Bites</h3>
+                    </div>
+                    <p class="text-bodyGray leading-relaxed">
+                        Pair your coffee with wood-fired style pizzas, creamy pastas, loaded nachos, and sizzling continental platters.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="grid grid-cols-1 sm:grid-cols-12 gap-5 items-center">
+                <div class="sm:col-span-5">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Online Table Booking" class="w-full h-48 object-cover">
+                </div>
+                <div class="sm:col-span-7">
+                    <div class="flex items-center mb-2">
+                        <span class="w-11 h-11 rounded-full bg-caramel text-espresso flex items-center justify-center mr-3 shrink-0">
+                            <i class="fas fa-table text-lg"></i>
+                        </span>
+                        <h3 class="text-espresso font-heading font-bold text-xl">Online Table Booking</h3>
+                    </div>
+                    <p class="text-bodyGray leading-relaxed">
+                        Skip the weekend wait opposite Quest Mall—reserve your 5th-floor table online in seconds with instant WhatsApp confirmation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 50% OFF SPECIAL OFFER BANNER (Matches Screenshot 7) ================= -->
+    <section class="coffee-bg torn-top torn-bottom py-20 sm:py-28 px-5 text-center my-10">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="text-caramel font-heading font-extrabold text-5xl sm:text-7xl mb-3">
+                50% OFF
+            </h2>
+            <h3 class="text-white font-heading font-bold text-2xl sm:text-4xl mb-3">
+                Sunday Special Offer
+            </h3>
+            <p class="text-white/90 text-lg sm:text-xl mb-8">
+                Exclusive Late-Night & Sunday Combo Privileges at La Letizia
+            </p>
+            
+            <form onsubmit="handlePromoSignup(event)" class="flex flex-col sm:flex-row max-w-md mx-auto">
+                <input type="email" id="promo-email" required placeholder="Your Email" 
+                       class="w-full px-5 py-4 bg-white text-espresso outline-none text-base">
+                <button type="submit" class="bg-caramel hover:bg-caramelHover text-espresso font-heading font-semibold px-7 py-4 shrink-0 transition">
+                    Sign Up
+                </button>
+            </form>
+            <p id="promo-msg" class="text-caramel text-sm mt-3 hidden">Thank you! Your VIP offer code has been unlocked.</p>
+        </div>
+    </section>
+
+    <!-- ================= MENU & PRICING (Matches Screenshot 6) ================= -->
+    <section id="menu" class="py-14 sm:py-20 px-5 max-w-7xl mx-auto">
+        <div class="section-title">
+            <h4 class="text-caramel font-heading font-semibold tracking-[0.25em] uppercase text-lg sm:text-xl mb-1">
+                Menu & Pricing
+            </h4>
+            <h2 class="text-espresso font-heading font-bold text-3xl sm:text-5xl">
+                Competitive Pricing
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Column 1: Hot Coffee -->
+            <div>
+                <h3 class="text-espresso font-heading font-bold text-2xl sm:text-3xl mb-8">
+                    Hot Coffee
+                </h3>
+
+                <div class="space-y-8">
+                    <!-- Item 1 -->
+                    <div class="flex items-center gap-6">
+                        <div class="relative w-24 h-24 sm:w-28 sm:h-28 shrink-0">
+                            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=300&q=80" alt="Black Coffee" class="w-full h-full object-cover rounded-full">
+                            <span class="menu-price-badge">₹160</span>
+                        </div>
+                        <div>
+                            <h4 class="text-espresso font-heading font-bold text-xl mb-1">Black Coffee</h4>
+                            <p class="text-bodyGray leading-relaxed text-sm sm:text-base">
+                                Single-origin dark roast Americano pulled fresh with rich aromatic crema and bold finish.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="flex items-center gap-6">
+                        <div class="relative w-24 h-24 sm:w-28 sm:h-28 shrink-0">
+                            <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=300&q=80" alt="Chocolate Coffee" class="w-full h-full object-cover rounded-full">
+                            <span class="menu-price-badge">₹220</span>
+                        </div>
+                        <div>
+                            <h4 class="text-espresso font-heading font-bold text-xl mb-1">Chocolete Coffee</h4>
+                            <p class="text-bodyGray leading-relaxed text-sm sm:text-base">
+                                Belgian dark cocoa blended with double-shot espresso, steamed milk, and velvety foam art.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="flex items-center gap-6">
+                        <div class="relative w-24 h-24 sm:w-28 sm:h-28 shrink-0">
+                            <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=300&q=80" alt="Coffee With Milk" class="w-full h-full object-cover rounded-full">
+                            <span class="menu-price-badge">₹190</span>
+                        </div>
+                        <div>
+                            <h4 class="text-espresso font-heading font-bold text-xl mb-1">Coffee With Milk</h4>
+                            <p class="text-bodyGray leading-relaxed text-sm sm:text-base">
+                                Classic Italian Cappuccino & Hazelnut Cafe Latte topped with silky micro-foam.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 2: Cold Coffee & Cafe Bites -->
+            <div>
+                <h3 class="text-espresso font-heading font-bold text-2xl sm:text-3xl mb-8">
+                    Cold Coffee & Bites
+                </h3>
+
+                <div class="space-y-8">
+                    <!-- Item 4 -->
+                    <div class="flex items-center gap-6">
+                        <div class="relative w-24 h-24 sm:w-28 sm:h-28 shrink-0">
+                            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=300&q=80" alt="La Letizia Cold Frappe" class="w-full h-full object-cover rounded-full">
+                            <span class="menu-price-badge">₹240</span>
+                        </div>
+                        <div>
+                            <h4 class="text-espresso font-heading font-bold text-xl mb-1">Caramel Cold Frappe</h4>
+                            <p class="text-bodyGray leading-relaxed text-sm sm:text-base">
+                                Chilled double espresso blended with Madagascar vanilla ice cream and golden caramel drizzle.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="flex items-center gap-6">
+                        <div class="relative w-24 h-24 sm:w-28 sm:h-28 shrink-0">
+                            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=300&q=80" alt="Artisan Cafe Pizza" class="w-full h-full object-cover rounded-full">
+                            <span class="menu-price-badge">₹360</span>
+                        </div>
+                        <div>
+                            <h4 class="text-espresso font-heading font-bold text-xl mb-1">Smoked Chicken & Cheese Pizza</h4>
+                            <p class="text-bodyGray leading-relaxed text-sm sm:text-base">
+                                Hand-stretched crust topped with mozzarella, roasted bell peppers, herbs, and smoked chicken.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="flex items-center gap-6">
+                        <div class="relative w-24 h-24 sm:w-28 sm:h-28 shrink-0">
+                            <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=300&q=80" alt="Signature Mocktails" class="w-full h-full object-cover rounded-full">
+                            <span class="menu-price-badge">₹210</span>
+                        </div>
+                        <div>
+                            <h4 class="text-espresso font-heading font-bold text-xl mb-1">Midnight Berry Cooler</h4>
+                            <p class="text-bodyGray leading-relaxed text-sm sm:text-base">
+                                Refreshing house mocktail muddled with fresh berries, mint leaves, lime, and sparkling fizz.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= RESERVATION SECTION (Matches Screenshots 4 & 5) ================= -->
+    <section id="reservation" class="py-12 px-5 max-w-7xl mx-auto">
+        <div class="coffee-bg torn-top torn-bottom grid grid-cols-1 lg:grid-cols-2 overflow-hidden">
+            
+            <!-- Left Side: 30% OFF For Online Reservation (Screenshot 5) -->
+            <div class="p-8 sm:p-14 lg:p-16 flex flex-col justify-center">
+                <h2 class="text-caramel font-heading font-extrabold text-5xl sm:text-6xl mb-2">
+                    30% OFF
+                </h2>
+                <h3 class="text-white font-heading font-bold text-2xl sm:text-4xl mb-6 leading-snug">
+                    For Online Reservation
+                </h3>
+                <p class="text-white/85 leading-relaxed mb-6">
+                    Planning a coffee date, birthday celebration, or late-night hangout opposite Quest Mall? Pre-book your table at La Letizia (5th Floor, Gate 5) for priority entry and exclusive table privileges.
+                </p>
+                <ul class="space-y-3 text-white/90 text-base sm:text-lg">
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-caramel mr-3"></i>
+                        Instant Table Confirmation via WhatsApp
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-caramel mr-3"></i>
+                        Available for Afternoon, Evening & 12 AM – 5 AM Slots
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-caramel mr-3"></i>
+                        Zero Waiting Time at 5th Floor Gate 5 Entry
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Right Side: Book Your Table Form (Screenshot 4) -->
+            <div class="bg-[#281A17]/90 p-8 sm:p-14 lg:p-16 flex flex-col justify-center">
+                <h3 class="text-white font-heading font-bold text-3xl sm:text-4xl text-center mb-8">
+                    Book Your Table
+                </h3>
+                <form onsubmit="submitReservation(event)" class="space-y-4">
+                    <div>
+                        <input type="text" id="res-name" required placeholder="Name" class="koppee-input">
+                    </div>
+                    <div>
+                        <input type="tel" id="res-phone" required placeholder="Phone / WhatsApp Number" class="koppee-input">
+                    </div>
+                    <div>
+                        <input type="text" id="res-date" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" required placeholder="Date" class="koppee-input">
+                    </div>
+                    <div>
+                        <input type="text" id="res-time" onfocus="(this.type='time')" onblur="if(!this.value)this.type='text'" required placeholder="Time (12:00 PM - 5:00 AM)" class="koppee-input">
+                    </div>
+                    <div>
+                        <select id="res-person" required class="koppee-input bg-[#281A17] text-white/80">
+                            <option value="" disabled selected>Person</option>
+                            <option value="2 Persons">2 Persons</option>
+                            <option value="3 Persons">3 Persons</option>
+                            <option value="4 Persons">4 Persons</option>
+                            <option value="6+ Group Table">6+ Group Table</option>
+                        </select>
+                    </div>
+                    <div class="pt-2">
+                        <button type="submit" class="w-full bg-caramel hover:bg-caramelHover text-espresso font-heading font-bold text-lg py-4 transition">
+                            Book Now
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= TESTIMONIAL SECTION (Matches Screenshot 3) ================= -->
+    <section id="testimonial" class="py-14 sm:py-20 px-5 max-w-7xl mx-auto">
+        <div class="section-title">
+            <h4 class="text-caramel font-heading font-semibold tracking-[0.25em] uppercase text-lg sm:text-xl mb-1">
+                Testimonial
+            </h4>
+            <h2 class="text-espresso font-heading font-bold text-3xl sm:text-5xl">
+                Our Clients Say
+            </h2>
+        </div>
+
+        <!-- Testimonial Cards Container -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <!-- Client 1 -->
+            <div class="testimonial-card p-2">
+                <div class="flex items-center mb-4">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Client" class="w-20 h-20 object-cover mr-4">
+                    <div>
+                        <h4 class="text-espresso font-heading font-bold text-xl">Ananya Chatterjee</h4>
+                        <p class="italic text-bodyGray text-sm">Food Blogger, Kolkata</p>
+                    </div>
+                </div>
+                <p class="text-bodyGray leading-relaxed">
+                    "Hands down one of the best late-night cafes in Kolkata! Right opposite Quest Mall on the 5th floor, their hazelnut latte and peri-peri platter at 2 AM hit different."
+                </p>
+            </div>
+
+            <!-- Client 2 -->
+            <div class="testimonial-card p-2">
+                <div class="flex items-center mb-4">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Client" class="w-20 h-20 object-cover mr-4">
+                    <div>
+                        <h4 class="text-espresso font-heading font-bold text-xl">Rohan Sen</h4>
+                        <p class="italic text-bodyGray text-sm">Architect</p>
+                    </div>
+                </div>
+                <p class="text-bodyGray leading-relaxed">
+                    "Awesome ambiance, super polite staff, and great music. The fact that La Letizia stays open till 5:00 AM with full kitchen and coffee service makes it unbeatable."
+                </p>
+            </div>
+
+            <!-- Client 3 -->
+            <div class="testimonial-card p-2">
+                <div class="flex items-center mb-4">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80" alt="Client" class="w-20 h-20 object-cover mr-4">
+                    <div>
+                        <h4 class="text-espresso font-heading font-bold text-xl">Sneha Mukherjee</h4>
+                        <p class="italic text-bodyGray text-sm">Creative Director</p>
+                    </div>
+                </div>
+                <p class="text-bodyGray leading-relaxed">
+                    "Rated 4.5 stars for a reason! Their cold frappe, mocktails, and cozy seating make it my go-to spot in Park Circus for both work meetings and weekend nights."
+                </p>
+            </div>
+        </div>
+
+        <!-- Exact KOPPEE Carousel Dots (Matches Screenshot 3: 3 Gold Circles + 1 Dark Pill) -->
+        <div class="flex items-center justify-center space-x-2.5 mt-10">
+            <span class="w-5 h-5 rounded-full bg-caramel inline-block cursor-pointer"></span>
+            <span class="w-5 h-5 rounded-full bg-caramel inline-block cursor-pointer"></span>
+            <span class="w-11 h-5 rounded-full bg-espresso inline-block cursor-pointer"></span>
+            <span class="w-5 h-5 rounded-full bg-caramel inline-block cursor-pointer"></span>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER (Matches Screenshots 1, 2, 3) ================= -->
+    <footer id="contact" class="coffee-bg torn-top text-white pt-20 pb-10 px-5 mt-12">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/15">
+            
+            <!-- Col 1: GET IN TOUCH (Screenshot 2) -->
+            <div>
+                <h4 class="font-heading font-bold text-2xl uppercase tracking-[0.15em] mb-6">
+                    Get In Touch
+                </h4>
+                <div class="space-y-3.5 text-white/90 text-base">
+                    <p class="flex items-start">
+                        <i class="fas fa-map-marker-alt text-white mr-3.5 mt-1.5"></i>
+                        <span>5th Floor, Gate 5, 70, Beck Bagan Row, Opp. Quest Mall, Park Circus, Ballygunge, Kolkata 700017</span>
+                    </p>
+                    <p class="flex items-center">
+                        <i class="fas fa-phone-alt text-white mr-3.5"></i>
+                        <a href="tel:+918478052003" class="hover:text-caramel transition">+91 84780 52003</a>
+                    </p>
+                    <p class="flex items-center">
+                        <i class="fas fa-envelope text-white mr-3.5"></i>
+                        <a href="mailto:reservations@laletizia.in" class="hover:text-caramel transition">reservations@laletizia.in</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Col 2: FOLLOW US (Screenshot 1 & 2) -->
+            <div>
+                <h4 class="font-heading font-bold text-2xl uppercase tracking-[0.15em] mb-6">
+                    Follow Us
+                </h4>
+                <p class="text-white/85 leading-relaxed mb-5">
+                    Follow La Letizia for live gig updates, weekend late-night offers, and new seasonal brews in Kolkata.
+                </p>
+                <div class="flex space-x-2.5">
+                    <a href="https://maps.app.goo.gl/EwQrbh1jzVsHe12M6" target="_blank" rel="noopener" aria-label="Twitter"
+                       class="w-12 h-12 border border-white/80 flex items-center justify-center text-white hover:bg-caramel hover:border-caramel hover:text-espresso transition">
+                        <i class="fab fa-twitter text-lg"></i>
+                    </a>
+                    <a href="https://maps.app.goo.gl/EwQrbh1jzVsHe12M6" target="_blank" rel="noopener" aria-label="Facebook"
+                       class="w-12 h-12 border border-white/80 flex items-center justify-center text-white hover:bg-caramel hover:border-caramel hover:text-espresso transition">
+                        <i class="fab fa-facebook-f text-lg"></i>
+                    </a>
+                    <a href="https://maps.app.goo.gl/EwQrbh1jzVsHe12M6" target="_blank" rel="noopener" aria-label="Google Maps"
+                       class="w-12 h-12 border border-white/80 flex items-center justify-center text-white hover:bg-caramel hover:border-caramel hover:text-espresso transition">
+                        <i class="fas fa-map-location-dot text-lg"></i>
+                    </a>
+                    <a href="https://maps.app.goo.gl/EwQrbh1jzVsHe12M6" target="_blank" rel="noopener" aria-label="Instagram"
+                       class="w-12 h-12 border border-white/80 flex items-center justify-center text-white hover:bg-caramel hover:border-caramel hover:text-espresso transition">
+                        <i class="fab fa-instagram text-lg"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Col 3: OPEN HOURS (Screenshot 1 & 2) -->
+            <div>
+                <h4 class="font-heading font-bold text-2xl uppercase tracking-[0.15em] mb-6">
+                    Open Hours
+                </h4>
+                <div class="space-y-4 text-white/95 uppercase tracking-wide text-sm sm:text-base">
+                    <div>
+                        <p class="font-medium mb-1">Monday - Friday</p>
+                        <p class="text-white/85">12.00 PM - 5.00 AM</p>
+                    </div>
+                    <div>
+                        <p class="font-medium mb-1">Saturday - Sunday</p>
+                        <p class="text-white/85">12.00 PM - 5.00 AM</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Col 4: NEWSLETTER (Screenshot 1) -->
+            <div>
+                <h4 class="font-heading font-bold text-2xl uppercase tracking-[0.15em] mb-6">
+                    Newsletter
+                </h4>
+                <p class="text-white/85 leading-relaxed mb-5">
+                    Subscribe to get VIP invites to our late-night acoustic sessions and festive menu launches.
+                </p>
+                <form onsubmit="handleFooterNewsletter(event)" class="flex">
+                    <input type="email" required placeholder="Your Email" 
+                           class="w-full px-4 py-3.5 bg-white text-espresso outline-none text-sm">
+                    <button type="submit" class="bg-caramel hover:bg-caramelHover text-espresso font-heading font-semibold px-5 py-3.5 shrink-0 text-sm transition">
+                        Sign Up
+                    </button>
+                </form>
+                <p id="footer-news-msg" class="text-caramel text-xs mt-2 hidden">Subscribed! See you at La Letizia.</p>
+            </div>
+
+        </div>
+
+        <!-- Bottom Copyright (Matches Screenshot 1) -->
+        <div class="max-w-7xl mx-auto pt-8 text-center text-white/90 text-sm sm:text-base space-y-1.5">
+            <p>
+                Copyright &copy; <span class="text-caramel font-semibold">La Letizia</span>. All Rights Reserved.
+            </p>
+            <p class="text-white/75 text-sm">
+                5th Floor, Gate 5, 70 Beck Bagan Row, Opposite Quest Mall, Kolkata
+            </p>
+        </div>
+    </footer>
+
+    <!-- ================= FLOATING BACK-TO-TOP BUTTON (Matches All Screenshots) ================= -->
+    <a href="#home" id="back-to-top" aria-label="Back to Top"
+       class="fixed bottom-6 right-6 w-12 h-12 bg-caramel hover:bg-caramelHover text-espresso flex items-center justify-center shadow-lg z-50 transition-all duration-300">
+        <i class="fas fa-angle-double-up text-lg"></i>
+    </a>
+
+    <!-- ================= INTERACTIVE SCRIPTS ================= -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Navbar Background on Scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 60) {
+                navbar.classList.add('bg-espresso', 'shadow-md');
+                navbar.classList.remove('lg:bg-transparent');
+            } else {
+                navbar.classList.remove('bg-espresso', 'shadow-md');
+                navbar.classList.add('lg:bg-transparent');
+            }
+        });
+
+        // Hero Slider Data
+        const slides = [
+            {
+                subtitle: "We Have Been Serving",
+                title: "COFFEE",
+                tagline: "* OPEN TILL 5 AM *"
+            },
+            {
+                subtitle: "Opposite Quest Mall • 5th Floor",
+                title: "LA LETIZIA",
+                tagline: "* 12:00 PM TO 5:00 AM DAILY *"
+            }
+        ];
+        let currentSlide = 0;
+
+        function changeSlide(direction) {
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            document.getElementById('hero-subtitle').textContent = slides[currentSlide].subtitle;
+            document.getElementById('hero-title').textContent = slides[currentSlide].title;
+            document.getElementById('hero-tagline').textContent = slides[currentSlide].tagline;
+        }
+
+        // Promo Offer Form Handler
+        function handlePromoSignup(e) {
+            e.preventDefault();
+            document.getElementById('promo-msg').classList.remove('hidden');
+            e.target.reset();
+        }
+
+        // Footer Newsletter Handler
+        function handleFooterNewsletter(e) {
+            e.preventDefault();
+            document.getElementById('footer-news-msg').classList.remove('hidden');
+            e.target.reset();
+        }
+
+        // Online Table Reservation -> Direct WhatsApp Booking to La Letizia (+91 84780 52003)
+        function submitReservation(e) {
+            e.preventDefault();
+            const name = document.getElementById('res-name').value;
+            const phone = document.getElementById('res-phone').value;
+            const date = document.getElementById('res-date').value;
+            const time = document.getElementById('res-time').value;
+            const person = document.getElementById('res-person').value;
+
+            const text = `Hello La Letizia! I would like to reserve a table.%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Date:* ${encodeURIComponent(date)}%0A*Time:* ${encodeURIComponent(time)}%0A*Guests:* ${encodeURIComponent(person)}`;
+            window.open(`https://wa.me/918478052003?text=${text}`, '_blank');
+        }
+    </script>
+</body>
+</html>
